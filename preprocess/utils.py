@@ -17,7 +17,6 @@ def load_data():
     dfs = {sheet: xl.parse(sheet) for sheet in xl.sheet_names}
 
     data1 = dfs['7']
-    # data1.to_csv('data1_test.csv', index=False)
     data2 = dfs['1'].loc[:, ['Patient', 'Age at Diagnosis']].drop([554]).drop_duplicates()
     data3 = pd.read_csv('C:/Users/lijia/PycharmProjects/CancerDetection/data/data1.csv')
     # Median cfDNA Fragment Size (bp), GC Corrected Fragment Ratio Profile, age
