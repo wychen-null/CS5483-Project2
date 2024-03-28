@@ -12,7 +12,6 @@ random.seed(100)
 def tsne_plot(x, y, labels):
     x_new = TSNE(n_components=2, random_state=100, learning_rate='auto', init='random').fit_transform(x)  # 422*2
     # print(x_new)
-
     # 绘制t-SNE结果
     plt.figure(figsize=(10, 6))
     colors = 'r', 'g', 'b', 'c', 'm', 'y', 'k', 'orange'
